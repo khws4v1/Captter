@@ -50,7 +50,7 @@ namespace captter3
     {
         bool syaro = false;
         //連投防止
-        string homo = Properties.Settings.Default.imgpass;
+        string homo = Properties.Settings.Default.imgpath;
         //壁紙の画像のファイルパス
         string backgroundImageFileName = null;
         //coreTweet
@@ -196,7 +196,7 @@ namespace captter3
                         media_ids => x.Result.MediaId);
                 }
             }, TaskScheduler.FromCurrentSynchronizationContext());
-            homo = Properties.Settings.Default.imgpass = photoFileName;
+            homo = Properties.Settings.Default.imgpath = photoFileName;
             Properties.Settings.Default.Save();
             tweet.Clear();
         }
